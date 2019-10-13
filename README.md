@@ -1,5 +1,5 @@
 # Black-Friday-Prediction
-This is my approach on Analytics Vidhya Black Friday hackathon. You can find a complete step-by-step analysis on the issue as well as my Python code and conclusions.
+This is my approach on [Analytics Vidhya Black Friday hackathon](https://datahack.analyticsvidhya.com/contest/black-friday-data-hack/). You can find a complete step-by-step analysis on the issue as well as my Python code and conclusions.
 
 **Problem Statement**  <br />
 The challenge was to predict purchase prices of various products purchased by customers based on historical purchase patterns. The data contained features like age, gender, marital status, categories of products purchased, city demographics etc.
