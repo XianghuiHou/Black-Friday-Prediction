@@ -4,6 +4,21 @@ This is my approach on [Analytics Vidhya Black Friday hackathon](https://datahac
 **Problem Statement**  <br />
 The challenge was to predict purchase prices of various products purchased by customers based on historical purchase patterns. The data contained features like age, gender, marital status, categories of products purchased, city demographics etc.
 
+**Method**   <br />
+Feature Engineering played a crucial role for me in this challenge. Since, all the given variables were categorical in nature, I decided to begin with label encoding. So, I label encoded all the given input variables. Then, built a XGBoost model using these features. I didn’t want it to end here. Therefore, in pursuit of improvement, I tried few other models as well (RandomForest, GBM, SVM etc). But, they failed to produce better results than XGBoost.
+
+Then, I decided to do Feature Engineering. I created two types of encoding for all the variables and added them to the original data set:
+1. Count of each category in the training set
+2. Mean, Min, Max response per category for each of the variables in training set.
+
+I learnt the second trick from Owen Zhang's presentation on Tips for data science competitions: 
+
+(1). Encode categorical features using observation counts<br />
+(2). Encode categorical features using average response <br />
+I tried it out and improved my score.
+
+Finally, it was time for my finishing move, Ensemble. I built a model which with weighted average of 3XGB models which had different subset of the above mentioned features as inputs.
+
 # Machine Learning Project Checklist
 My machine learning project workflow mainly includes the following parts and it also shows how I tackle this series of problems. Suppose we get the dataset, then start our journey and let the data lead us and see what information could we get and how to accomplish the task.
 
